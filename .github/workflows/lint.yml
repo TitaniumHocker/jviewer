@@ -22,7 +22,7 @@ jobs:
         python-version: "3.9"
     - name: install binaries
       run: |
-        apt-get install --yes libsystemd
+        sudo apt-get install --yes libsystemd
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
