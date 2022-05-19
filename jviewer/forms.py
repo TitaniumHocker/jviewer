@@ -23,13 +23,8 @@ class JournalForm(FlaskForm):
         :raise ValidationError: If field is invalid.
         """
         result = subprocess.run(
-            [
-                "/usr/bin/systemctl",
-                "is-active",
-                field.data,
-                ">/dev/null",
-                "2>&1",
-            ]
+            ["/usr/bin/systemctl", "is-active", field.data],
+            capture_output=True,
         )
         if result.returncode != 0:
             raise validators.ValidationError(
