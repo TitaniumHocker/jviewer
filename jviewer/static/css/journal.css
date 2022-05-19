@@ -1,0 +1,12 @@
+.journal-container {
+  border-radius: 1rem;
+  padding: 1rem;
+  color: white;
+  background-color: black;
+}
+
+.journal {
+  font-family: monospace;
+  max-height: 85vh;
+  margin: 0;
+}

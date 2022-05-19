@@ -1,0 +1,30 @@
+{% extends "master.html.j2" %}
+{% from "bootstrap5/utils.html" import render_icon %}
+
+{% block styles %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{ url_for("static", filename="css/journal.css") }}">
+{% endblock %}
+
+{% block content %}
+  <main class="container">
+    <div class="row mt-4 justify-content-between">
+      <div class="col">
+        <a class="btn btn-primary align-middle pt-1 pb-1" href="{{ url_for("index") }}">{{ render_icon("arrow-left") }} back</a>
+      </div>
+      <div class="col text-end">
+        <h3>{{ unit }} journal</h3>
+      </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col journal-container">
+            <pre id="journal" class="overflow-scroll mx-auto journal">Loading log...</pre>
+        </div>
+    </div>
+  </main>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script type="text/javascript" src="{{ url_for("static", filename="js/journal.js")}}"></script>
+{% endblock %}

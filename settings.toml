@@ -1,0 +1,13 @@
+[default]
+BOOTSTRAP_BOOTSWATCH_THEME = "cosmo"
+EXTENSIONS = [
+    "jviewer.ext:bootstrap.init_app",
+]
+
+[development]
+SECRET_KEY = "super-secret"
+DEBUG_TB_INTERCEPT_REDIRECTS = false
+EXTENSIONS = [
+    "dynaconf_merge",
+    "jviewer.ext:debugtoolbar.init_app"
+]

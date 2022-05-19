@@ -1,0 +1,36 @@
+{% extends "master.html.j2" %}
+{% from "bootstrap5/form.html" import render_form %}
+
+{% block content %}
+  <main class="container d-flex flex-column min-vh-100 min-vw-100 justify-content-center align-items-center">
+    <div class="row">
+      <div class="col">
+        <div class="row text-center">
+          <h3 class="display-3">JViewer</h1>
+          <p>Simple journald viewer</p>
+        </div>
+        <div class="row">
+          <div class="col">
+            {{ render_form(form, form_type="inline", extra_classes="justify-content-center") }}
+          </div>
+        </div>
+        {%- if form.errors %}
+        <div class="row">
+          <div class="col text-center">
+            {%- for field in form.errors %}
+            {%- for error in form[field].errors %}
+            <span class="badge bg-danger">{{ error }}</span>
+            {%- endfor %}
+            {%- endfor %}
+          </div>
+        </div>
+        {%- endif %}
+        <div class="row mt-4">
+          <div class="col text-center">
+            <a href="http://github.com/titaniumhocker/jviewer">source code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}

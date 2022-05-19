@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "jviewer"
+version = "1.0.0rc1"
+description = "Simple realtime viewer for journald"
+authors = ["Ivan Fedorov <inbox@titaniumhocker.ru>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Flask = "^2.1.2"
+Flask-WTF = "^1.0.1"
+Bootstrap-Flask = "^2.0.2"
+dynaconf = "^3.1.8"
+python-dotenv = "^0.20.0"
+systemd-python = "^234"
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+mypy = "^0.950"
+flake8 = "^4.0.1"
+isort = "^5.10.1"
+flake8-black = "^0.3.3"
+flake8-isort = "^4.1.1"
+flake8-pydocstyle = "^0.2.0"
+watchdog = "^2.1.8"
+termcolor = "^1.1.0"
+Flask-DebugToolbar = "^0.13.1"
+ipython = "^8.3.0"
+flask-shell-ipython = "^0.4.1"
+toml = "^0.10.2"
+pytest = "^7.1.2"
+pytest-cov = "^3.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 79
+skip-string-normalization = true
+
+[tool.isort]
+profile = "black"
+line_length = 79
