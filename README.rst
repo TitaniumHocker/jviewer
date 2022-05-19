@@ -37,6 +37,9 @@ Usage
 
 Just type systemd unit name in field on index page and click `submit`.
 
+.. image:: media/jviewer.gif
+   :alt: Preview
+
 
 .. |black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
    :target: https://github.com/psf/black
