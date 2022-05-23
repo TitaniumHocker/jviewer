@@ -4,6 +4,8 @@ import subprocess
 from flask_wtf import FlaskForm
 from wtforms import fields, validators
 
+from jviewer.const import SYSTEMCTL_PATH
+
 
 class JournalForm(FlaskForm):
     """Form for unit selection."""
@@ -23,7 +25,7 @@ class JournalForm(FlaskForm):
         :raise ValidationError: If field is invalid.
         """
         result = subprocess.run(
-            ["/usr/bin/systemctl", "is-active", field.data],
+            [str(SYSTEMCTL_PATH), "is-active", field.data],
             capture_output=True,
         )
         if result.returncode != 0:
