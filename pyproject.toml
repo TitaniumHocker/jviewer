@@ -13,6 +13,7 @@ Bootstrap-Flask = "^2.0.2"
 dynaconf = "^3.1.8"
 python-dotenv = "^0.20.0"
 systemd-python = "^234"
+gunicorn = "^20.1.0"
 
 [tool.poetry.dev-dependencies]
 black = "^22.3.0"
