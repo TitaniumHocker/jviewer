@@ -11,7 +11,10 @@ def index():
     form = JournalForm()
     if form.validate_on_submit():
         return redirect(url_for("journal", unit=form.unit.data))
-    return render_template("index.html.j2", form=form)
+    return (
+        render_template("index.html.j2", form=form),
+        400 if form.errors else 200,
+    )
 
 
 def journal(unit: str):

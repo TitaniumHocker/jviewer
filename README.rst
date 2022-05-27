@@ -8,6 +8,16 @@ jviewer
 
 Simple realtime viewer for journald.
 
+This project was created as example of streaming data from flask application.
+
+
+Additional requirements
+-----------------------
+
+Any GNU/Linux distribution based on `systemd`.
+`libsystemd-dev` or it's equivalent must be installed in your system.
+
+
 Run the application
 -------------------
 
@@ -39,6 +49,16 @@ Just type systemd unit name in field on index page and click `submit`.
 
 .. image:: media/jviewer.gif
    :alt: Preview
+
+
+
+Tests
+-----
+
+.. code::
+
+   poetry run python -m pytest
+
 
 
 .. |black| image:: https://img.shields.io/badge/code%20style-black-000000.svg

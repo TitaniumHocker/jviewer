@@ -11,3 +11,7 @@ EXTENSIONS = [
     "dynaconf_merge",
     "jviewer.ext:debugtoolbar.init_app"
 ]
+
+[testing]
+TESTING = true
+WTF_CSRF_ENABLED = false
