@@ -131,3 +131,6 @@ dmypy.json
 # Pyright Language server
 pyrightconfig.json
 src/pyrightconfig.json
+
+
+.secrets.toml

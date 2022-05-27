@@ -7,8 +7,14 @@ from flask import Flask
 
 from jviewer import views
 
+EnvTypes = t.Union[
+    t.Literal["development"],
+    t.Literal["production"],
+    t.Literal["testing"],
+]
 
-def create_app(env: t.Optional[str] = None) -> Flask:
+
+def create_app(env: t.Optional[EnvTypes] = None) -> Flask:
     """Application factory.
 
     :returns: Application.

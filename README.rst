@@ -60,6 +60,19 @@ Tests
    poetry run python -m pytest
 
 
+Run with gunicorn in production
+-------------------------------
+
+**WARNING**: To work normally with this application gunicorn must be used
+with async, `gevent` for example, or threaded worker - `gthread`.
+
+Just copy `.secrets.toml.example` to `.secrets.toml` and run:
+
+.. code::
+
+   poetry run gunicorn jviewer.wsgi
+
+
 
 .. |black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
    :target: https://github.com/psf/black
